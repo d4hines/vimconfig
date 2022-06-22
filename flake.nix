@@ -107,12 +107,10 @@
             ./modules/lsp.nix
             ./modules/aesthetics.nix
             ./modules/telescope.nix
-            ./modules/misc.nix
             ./modules/treesitter.nix
             ./modules/git.nix
             ./modules/wilder.nix
             ./modules/leap.nix
-            ./modules/agda.nix
           ];
         };
       in
