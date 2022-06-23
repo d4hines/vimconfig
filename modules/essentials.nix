@@ -7,8 +7,6 @@ in
   plugins = with pkgs; [
     # command discover
     which-key
-    # for sane tab detection
-    guess-indent
   ];
 
   set.autoread = true;
@@ -150,9 +148,6 @@ in
       "cU" = [ "lua require('crates').upgrade_crate()" "upgrade a crate" ];
       "cUa" =
         [ "lua require('crates').upgrade_all_crates()" "upgrade all crates" ];
-      "gi" =
-        [ "<cmd>GuessIndent<CR>" "guess indent again" ];
-
 
       # adga specific things
       "ad" = [ "<cmd>CornelisGoToDefinition<CR>" "Goto agda defn" ];
@@ -170,8 +165,6 @@ in
     };
   };
   use.which-key.setup = callWith { };
-
-  use.guess-indent.setup = callWith { };
 
   # yoinked from gytis
   vimscript = ''
