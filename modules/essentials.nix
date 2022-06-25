@@ -24,6 +24,7 @@ in
     vimPlugins.lualine-nvim
     vimPlugins.tabline-nvim
     vimPlugins.nvim-web-devicons   
+    todo-comments
   ];
 
   lua = builtins.readFile ./init.lua;

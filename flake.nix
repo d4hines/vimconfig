@@ -23,8 +23,8 @@
       flake = false;
     };
     one_monokai = {
-        url = "github:cpea2506/one_monokai.nvim";
-        flake = false;
+      url = "github:cpea2506/one_monokai.nvim";
+      flake = false;
     };
     dracula-nvim = {
       url = "github:Mofiqul/dracula.nvim";
@@ -88,6 +88,10 @@
     };
     leap-src = {
       url = "github:ggandor/leap.nvim";
+      flake = false;
+    };
+    todo-comments = {
+      url = "github:folke/todo-comments.nvim";
       flake = false;
     };
   };

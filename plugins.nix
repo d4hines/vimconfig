@@ -27,5 +27,5 @@ with inputs; {
   telescope-ui-select = plugin "telescope-ui-select" telescope-ui-select-src;
   which-key = plugin "which-key" which-key-src;
   leap = plugin "leap" leap-src;
-
+  todo-comments = plugin "todo-comments" todo-comments;
 }

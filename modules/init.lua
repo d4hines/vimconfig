@@ -49,10 +49,10 @@ vim.o.wildmode = "list:longest,list:full";
 require('gitsigns').setup { }
 require('neogit').setup { }
 
--------------- Aesthetics ------
+---------- Aesthetics -----------
 require('one_monokai').setup { }
 
 require('tabline').setup { }
 require('lualine').setup { }
 
-
+require('todo-comments').setup { }

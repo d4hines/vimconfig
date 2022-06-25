@@ -423,6 +423,7 @@
         "telescope-src": "telescope-src",
         "telescope-ui-select-src": "telescope-ui-select-src",
         "terraform-ls-src": "terraform-ls-src",
+        "todo-comments": "todo-comments",
         "which-key-src": "which-key-src"
       }
     },
@@ -487,6 +488,22 @@
       "original": {
         "owner": "hashicorp",
         "repo": "terraform-ls",
+        "type": "github"
+      }
+    },
+    "todo-comments": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642601933,
+        "narHash": "sha256-8uj5TxO9XZlSCB4lVRbKRc1IlUEKcBf/4bDviwuxEgs=",
+        "owner": "folke",
+        "repo": "todo-comments.nvim",
+        "rev": "98b1ebf198836bdc226c0562b9f906584e6c400e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "todo-comments.nvim",
         "type": "github"
       }
     },
