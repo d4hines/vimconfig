@@ -116,7 +116,7 @@
             ./modules/essentials.nix
             ./modules/lsp.nix
             ./modules/telescope.nix
-            ./modules/treesitter.nix
+            # ./modules/treesitter.nix
             ./modules/wilder.nix
           ];
         };

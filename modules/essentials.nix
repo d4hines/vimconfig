@@ -4,7 +4,7 @@ let
   cmd = command: desc: [ "<cmd>${command}<cr>" desc ];
 in
 {
-  # hello
+  # hello  TODO: asdf
   plugins = with pkgs; [
     # command discover
     which-key
