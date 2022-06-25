@@ -4,14 +4,13 @@ let
   cmd = command: desc: [ "<cmd>${command}<cr>" desc ];
 in
 {
+  # hello
   plugins = with pkgs; [
     # command discover
     which-key
   ];
 
-  set.autoread = true;
-  set.timeoutlen = 0;
-  set.signcolumn = "yes";
+  lua = builtins.readFile ./init.lua;
 
   vim.g = {
     mapleader = " ";
@@ -170,5 +169,8 @@ in
       \ if line("'\"") >= 1 && line("'\"") <= line("$") |
       \   exe "normal! g`\"" |
       \ endif
+
+    ":set updatetime 1000
+    ":set autoread | au CursorHold * checktime | call feedkeys("lh")
   '';
 }
