@@ -1,15 +1,17 @@
 { pkgs, dsl, ... }:
 with dsl; {
   plugins = with pkgs; [
-    dracula
+    one_monokai
     vimPlugins.lualine-nvim
     vimPlugins.tabline-nvim
     vimPlugins.nvim-web-devicons
   ];
 
-  vimscript = ''
-    colorscheme dracula
-  '';
+  setup.one_monokai = {};
+
+  # vimscript = ''
+  #   colorscheme dracula
+  # '';
   setup.tabline.show_index = false;
 
   setup.lualine = {

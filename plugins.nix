@@ -21,6 +21,8 @@ with inputs; {
   comment-nvim = plugin "comment-nvim" comment-nvim-src;
   conceal = plugin "conceal" conceal-src;
   dracula = plugin "dracula" dracula-nvim;
+  one_monokai = plugin "one_monokai" one_monokai;
+  neon = plugin "neon" neon;
   fidget = plugin "fidget" fidget-src;
   telescope-ui-select = plugin "telescope-ui-select" telescope-ui-select-src;
   which-key = plugin "which-key" which-key-src;

@@ -10,6 +10,8 @@ in
   ];
 
   set.autoread = true;
+  set.timeoutlen = 0;
+  set.signcolumn = "yes";
 
   vim.g = {
     mapleader = " ";

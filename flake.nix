@@ -20,6 +20,14 @@
       url = "github:nvim-telescope/telescope.nvim";
       flake = false;
     };
+    neon = {
+      url = "github:rafamadriz/neon";
+      flake = false;
+    };
+    one_monokai = {
+        url = "github:cpea2506/one_monokai.nvim";
+        flake = false;
+    };
     dracula-nvim = {
       url = "github:Mofiqul/dracula.nvim";
       flake = false;
