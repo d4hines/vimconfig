@@ -111,7 +111,6 @@
           imports = [
             ./modules/essentials.nix
             ./modules/lsp.nix
-            # ./modules/aesthetics.nix
             ./modules/telescope.nix
             ./modules/treesitter.nix
             ./modules/wilder.nix
