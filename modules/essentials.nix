@@ -19,7 +19,11 @@ in
     vimPlugins.repeat
     leap
 
-    
+    # aesthetics
+    one_monokai
+    vimPlugins.lualine-nvim
+    vimPlugins.tabline-nvim
+    vimPlugins.nvim-web-devicons   
   ];
 
   lua = builtins.readFile ./init.lua;

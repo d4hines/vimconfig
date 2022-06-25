@@ -111,12 +111,10 @@
           imports = [
             ./modules/essentials.nix
             ./modules/lsp.nix
-            ./modules/aesthetics.nix
+            # ./modules/aesthetics.nix
             ./modules/telescope.nix
             ./modules/treesitter.nix
-            ./modules/git.nix
             ./modules/wilder.nix
-            ./modules/leap.nix
           ];
         };
       in
