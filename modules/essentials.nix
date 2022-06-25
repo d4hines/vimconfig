@@ -8,59 +8,21 @@ in
   plugins = with pkgs; [
     # command discover
     which-key
+
+    # Git
+    vimPlugins.neogit
+    blamer-nvim
+    vimPlugins.diffview-nvim
+    vimPlugins.gitsigns-nvim
+
+    # motion
+    vimPlugins.repeat
+    leap
+
+    
   ];
 
   lua = builtins.readFile ./init.lua;
-
-  vim.g = {
-    mapleader = " ";
-    nofoldenable = true;
-    noshowmode = true;
-    completeopt = "menu,menuone,noselect";
-    noswapfile = true;
-    blamer_enabled = 1;
-  };
-
-  vim.o = {
-    showcmd = true;
-    showmatch = true;
-    ignorecase = true;
-    smartcase = true;
-    cursorline = true;
-    wrap = true;
-    autoindent = true;
-    copyindent = true;
-    splitbelow = true;
-    splitright = true;
-    number = true;
-    relativenumber = true;
-    title = true;
-    undofile = true;
-    autoread = true;
-    hidden = true;
-    list = true;
-    background = "dark";
-    backspace = "indent,eol,start";
-    undolevels = 1000000;
-    undoreload = 1000000;
-    foldmethod = "indent";
-    foldnestmax = 10;
-    foldlevel = 1;
-    scrolloff = 3;
-    sidescrolloff = 5;
-    listchars = "tab:→→,trail:●,nbsp:○";
-    clipboard = "unnamed,unnamedplus";
-    formatoptions = "tcqj";
-    encoding = "utf-8";
-    fileencoding = "utf-8";
-    fileencodings = "utf-8";
-    bomb = true;
-    binary = true;
-    matchpairs = "(:),{:},[:],<:>";
-    expandtab = true;
-    #pastetoggle = "<leader>v";
-    wildmode = "list:longest,list:full";
-  };
 
   use.which-key.register = dsl.callWith {
     "K" = [ "<cmd>lua show_documentation()<CR>" "Get Type Information" ];
@@ -152,25 +114,4 @@ in
     };
   };
   use.which-key.setup = callWith { };
-
-  # yoinked from gytis
-  vimscript = ''
-    " Function to clean trailing Spaces on save
-    function! CleanExtraSpaces() "Function to clean unwanted spaces
-        let save_cursor = getpos(".")
-        let old_query = getreg('/')
-        silent! %s/\s\+$//e
-        call setpos('.', save_cursor)
-        call setreg('/', old_query)
-    endfun
-    autocmd BufWritePre * :call CleanExtraSpaces()
-    " Preserve cursor location
-    autocmd BufReadPost *
-      \ if line("'\"") >= 1 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
-
-    ":set updatetime 1000
-    ":set autoread | au CursorHold * checktime | call feedkeys("lh")
-  '';
 }
