@@ -60,3 +60,15 @@ require('todo-comments').setup { }
 ---------- Treesitter ----------
 require('Comment').setup()
 
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "nix",
+    "rust",
+    "ocaml",
+    "javascript",
+    "typescript"
+  },
+  highlight = {
+    enable = true,
+  },
+}

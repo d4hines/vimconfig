@@ -1,31 +1,7 @@
 { pkgs, dsl, ... }:
 with dsl; {
   plugins = with pkgs; [
-    # commenting with treesiter
-    comment-nvim
-    # which method am I on
-    vimPlugins.nvim-treesitter-context
-    vimPlugins.nvim-treesitter-textobjects
-    (pkgs.vimPlugins.nvim-treesitter.withPlugins
-      # tree sitter with language support
-      (plugins:
-        with plugins; [
-          tree-sitter-nix
-          tree-sitter-json
-          tree-sitter-c
-          tree-sitter-go
-          tree-sitter-bash
-          tree-sitter-javascript
-          tree-sitter-typescript
-          tree-sitter-ocaml
-          tree-sitter-rust
-        ]))
-    # auto open/close html tags with treesitter
-    vimPlugins.nvim-ts-autotag
-    # highlighted parens
-    vimPlugins.nvim-ts-rainbow
-    # toggle btwn all the things with %
-    vimPlugins.vim-matchup
+    
   ];
 
   use."nvim-treesitter.configs".setup = callWith {
