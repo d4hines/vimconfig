@@ -28,4 +28,5 @@ with inputs; {
   which-key = plugin "which-key" which-key-src;
   leap = plugin "leap" leap-src;
   todo-comments = plugin "todo-comments" todo-comments;
+  legendary = plugin "legendary" legendary;
 }

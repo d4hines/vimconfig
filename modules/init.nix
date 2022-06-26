@@ -8,6 +8,7 @@ in
   plugins = with pkgs; [
     # command discover
     which-key
+    legendary
 
     # Git
     vimPlugins.neogit

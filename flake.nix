@@ -113,7 +113,7 @@
           withPython3 = true;
           package = pkgs.neovim;
           imports = [
-            ./modules/essentials.nix
+            ./modules/init.nix
             ./modules/lsp.nix
             ./modules/telescope.nix
             # ./modules/treesitter.nix
