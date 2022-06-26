@@ -31,12 +31,8 @@ in
 
   use.which-key.register = dsl.callWith {
     "K" = [ "<cmd>lua show_documentation()<CR>" "Get Type Information" ];
-    "j" = [ "gj" "Wrapped down" ];
-    "k" = [ "gk" "Wrapped up" ];
     "['<leader>']" = {
       name = "+leader_bindings";
-
-      ai = cmd "AnsiEsc" "Replace ansi escape codes with colors";
       D = cmd "lua vim.lsp.buf.declaration()" "Jump to Declaration";
       d = cmd "lua vim.lsp.buf.definition()" "Jump to Definition";
       i = cmd "lua vim.lsp.buf.implementation()" "Jump to Implementation";

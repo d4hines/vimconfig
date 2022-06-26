@@ -28,24 +28,8 @@ with dsl; {
     vimPlugins.vim-matchup
   ];
 
-  use.Comment.setup = callWith {
-    toggler = {
-      line = "<leader>c<leader>";
-      block = "<leader>b<leader>";
-    };
-    opleader = {
-      line = "<leader>c";
-      block = "<leader>b";
-    };
-    extra = {
-      above = "<leader>cO";
-      below = "<leader>co";
-      eol = "<leader>cA";
-    };
-  };
-
   use."nvim-treesitter.configs".setup = callWith {
-    ensure_installed = [ "nix" "rust" ];
+    ensure_installed = [ "nix" "rust" "ocaml" "javascript" "typescript" ];
     highlight = {
       enable = true;
       use_languagetree = true;

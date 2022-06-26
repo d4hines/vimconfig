@@ -56,3 +56,7 @@ require('tabline').setup { }
 require('lualine').setup { }
 
 require('todo-comments').setup { }
+
+---------- Treesitter ----------
+require('Comment').setup()
+
